@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>    /// eqibilirium
+using namespace std;
+int main() {
+	int n;
+    cin>>n;
+    int nn=n;
+    vector <int> xv;
+    vector <int> yv;
+    vector <int> zv;
+    while(nn--)
+    {
+        int x,y,z;
+        cin>>x>>y>>z;
+        xv.push_back(x);
+        yv.push_back(y);
+        zv.push_back(z);
+    }
+    int sx=0,sy=0,sz=0;
+    for(int i=0;i<n;i++)
+    {
+        sx+=xv[i];
+        sy+=yv[i];
+        sz+=zv[i];
+    }
+    if(sx == 0 && sy == 0 && sz == 0)
+    cout<<"YES";
+    else cout<<"NO";
+}
